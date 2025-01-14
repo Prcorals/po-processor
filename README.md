@@ -1,100 +1,49 @@
 # PO Processor
 
-A Python application for processing and extracting data from purchase orders (POs) using customizable templates.
+A Python application for processing purchase orders (POs) with visual field selection.
 
 ## Features
 
-- 📄 PDF Purchase Order processing
-- 🎯 Visual template creation - point and click to select fields
-- 🔧 Customizable field extraction
-- 📊 Data validation and preprocessing
-- 💾 Export to multiple formats
-- 🔄 Google Drive integration
-- 🎨 User-friendly GUI interface
+- Visual field selection from PDFs
+- Data extraction with multiple field types
+- Template saving and loading
+- Support for text, numbers, dates, and currency
 
 ## Installation
 
-1. Clone the repository:
 ```bash
+# Clone the repository
 git clone https://github.com/Prcorals/po-processor.git
 cd po-processor
-```
 
-2. Create and activate a virtual environment:
-```bash
+# Create virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
 
-3. Install dependencies:
-```bash
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-4. Set up Google Drive credentials (optional):
-   - Go to Google Cloud Console
-   - Create a new project
-   - Enable Drive API
-   - Create OAuth 2.0 credentials
-   - Download and save as `credentials.json`
-
 ## Usage
 
-1. Start the application:
+1. Run the application:
 ```bash
 python src/po_gui.py
 ```
 
-2. Create a template:
-   - Click "Create New Template"
-   - Load a sample PO
-   - Click and drag to select fields
-   - Configure field properties
-   - Save template
+2. Load a PDF:
+   - Click 'Open PDF'
+   - Select your PO document
 
-3. Process POs:
-   - Select a PDF file
-   - Choose the appropriate template
-   - Click "Process PO"
-   - Review extracted data
-   - Export or upload to Drive
+3. Select fields:
+   - Selection mode is enabled by default
+   - Click and drag on the PDF to select fields
+   - Enter field name and type
 
-## Templates
-
-Templates can be created visually using the Template Builder. For each field you can specify:
-
-- Field type (text, number, date, table)
-- Position on page
-- Validation rules
-- Preprocessing options
-- Custom extraction logic
-
-Example template structure:
-```json
-{
-  "name": "Sample Template",
-  "fields": {
-    "po_number": {
-      "type": "text",
-      "page": 0,
-      "x1": 100,
-      "y1": 100,
-      "x2": 200,
-      "y2": 120,
-      "required": true
-    }
-  }
-}
-```
+4. Process data:
+   - View extracted data in the right panel
+   - Save templates for reuse
 
 ## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Pull requests are welcome. For major changes, please open an issue first.
