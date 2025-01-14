@@ -1,0 +1,1 @@
+# Content of template_config.py
